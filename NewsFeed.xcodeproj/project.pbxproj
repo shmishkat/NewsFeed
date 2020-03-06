@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		A217341D240E845F0096647A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A217341C240E845F0096647A /* Assets.xcassets */; };
 		A2173420240E845F0096647A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A217341F240E845F0096647A /* Preview Assets.xcassets */; };
 		A2173423240E845F0096647A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2173421240E845F0096647A /* LaunchScreen.storyboard */; };
+		A217342C240E86A20096647A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = A217342B240E86A20096647A /* SwiftyJSON */; };
+		A217342F240E882C0096647A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A217342E240E882C0096647A /* SDWebImageSwiftUI */; };
+		A228A79D240EB603005CEDC2 /* BottomBar-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A228A79C240EB603005CEDC2 /* BottomBar-SwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A228A79D240EB603005CEDC2 /* BottomBar-SwiftUI in Frameworks */,
+				A217342F240E882C0096647A /* SDWebImageSwiftUI in Frameworks */,
+				A217342C240E86A20096647A /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,11 @@
 			dependencies = (
 			);
 			name = NewsFeed;
+			packageProductDependencies = (
+				A217342B240E86A20096647A /* SwiftyJSON */,
+				A217342E240E882C0096647A /* SDWebImageSwiftUI */,
+				A228A79C240EB603005CEDC2 /* BottomBar-SwiftUI */,
+			);
 			productName = NewsFeed;
 			productReference = A2173410240E845A0096647A /* NewsFeed.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +133,11 @@
 				Base,
 			);
 			mainGroup = A2173407240E845A0096647A;
+			packageReferences = (
+				A217342A240E86A20096647A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				A217342D240E882C0096647A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				A228A79B240EB603005CEDC2 /* XCRemoteSwiftPackageReference "bottombar-swiftui" */,
+			);
 			productRefGroup = A2173411240E845A0096647A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,6 +360,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A217342A240E86A20096647A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A217342D240E882C0096647A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.3;
+			};
+		};
+		A228A79B240EB603005CEDC2 /* XCRemoteSwiftPackageReference "bottombar-swiftui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smartvipere75/bottombar-swiftui.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A217342B240E86A20096647A /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A217342A240E86A20096647A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		A217342E240E882C0096647A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A217342D240E882C0096647A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		A228A79C240EB603005CEDC2 /* BottomBar-SwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A228A79B240EB603005CEDC2 /* XCRemoteSwiftPackageReference "bottombar-swiftui" */;
+			productName = "BottomBar-SwiftUI";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A2173417240E845A0096647A /* NewsFeed.xcdatamodeld */ = {
