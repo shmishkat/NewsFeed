@@ -37,15 +37,15 @@ struct ContentView: View {
                     HStack{
                         VStack(alignment: .leading, spacing: 10){
                             Text(i.title).fontWeight(.heavy)
-                            Text(i.description).lineLimit(2)
+                            Text(i.description).lineLimit(2).font(.body)
                             
                         }
                         if i.image != ""{
                              
                           WebImage(url: URL(string: i.image)!, options: .highPriority, context: nil)
                             .resizable()
-                            .frame(width: 110, height: 135)
-                            .cornerRadius(20)
+                            .frame(width: 110, height: 80)
+                            .cornerRadius(10)
                             
                         }
                        
@@ -56,6 +56,7 @@ struct ContentView: View {
 
             }.navigationBarTitle("News")
         }
+        .padding()
         
     }
 }
