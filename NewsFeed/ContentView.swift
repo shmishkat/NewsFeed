@@ -33,7 +33,7 @@ struct ContentView: View {
                 NavigationLink(destination:
                 webView(url: i.url)
                     .navigationBarTitle("",displayMode: .inline)){
-                    
+                        
                     HStack{
                         VStack(alignment: .leading, spacing: 10){
                             Text(i.title).fontWeight(.heavy)
@@ -60,6 +60,8 @@ struct ContentView: View {
         
     }
 }
+
+
 
 struct datatypes : Identifiable{
     var id : String
